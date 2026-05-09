@@ -16,23 +16,6 @@ interface SwiperProps {
 }
 
 export const Swip: React.FC<SwiperProps> = ({ films }) => {
-  const [isBeginning, setIsBeginning] = useState(true);
-  const [isEnd, setIsEnd] = useState(false);
-  const [swiperRef, setSwiperRef] = useState<SwiperType | null>(null);
-
-  const handleSlideChange = (swiper: SwiperType) => {
-    setIsBeginning(swiper.isBeginning);
-    setIsEnd(swiper.isEnd);
-  };
-
-  const handlePrev = () => {
-    swiperRef?.slidePrev();
-  };
-
-  const handleNext = () => {
-    swiperRef?.slideNext();
-  };
-
   return (
     <div className="Swip">
       <Swiper
@@ -40,8 +23,6 @@ export const Swip: React.FC<SwiperProps> = ({ films }) => {
         slidesPerView="auto"
         spaceBetween={40}
         grabCursor={true}
-        onSwiper={setSwiperRef}
-        onSlideChange={handleSlideChange}
         className="Swip__swiper"
       >
         {films.map((film, index) => (

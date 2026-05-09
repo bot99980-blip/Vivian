@@ -54,7 +54,7 @@ export const films: FilmProps[] = [
     title: "Брат 1997",
     kinopoisk: 8.4,
     imdb: 0,
-    youtubesourse: "youtube.com/watch?v=aDaaCGZz-Ok",
+    youtubesourse: "https://www.youtube.com/watch?v=aDaaCGZz-Ok",
     undertitle: "Брат",
     img: [
       "https://avatars.mds.yandex.net/get-ott/12808873/2a0000019854a9569428328fa99b3f0e16d3/300x450",
@@ -85,9 +85,68 @@ export const films: FilmProps[] = [
     ],
     fav: true,
   },
-
   {
     id: 8,
+    title: "Гангстер, коп и дьявол  2019",
+    kinopoisk: 7.3,
+    imdb: 7.1,
+    youtubesourse: "https://www.youtube.com/watch?v=u-bo9fK9Zpo",
+    undertitle: "Akinjeon",
+    img: [
+      "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/2cfb38ba-2c39-4ac5-b2ef-943b6d7c30e9/300x450",
+    ],
+    fav: false,
+  },
+  {
+    id: 9,
+    title: "Третий акт 2011",
+    kinopoisk: 7.4,
+    imdb: 7.7,
+    youtubesourse: "youtube.com/watch?v=kJPu9d7H_ro",
+    undertitle: "The Magic of Belle Isle",
+    img: [
+      "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/d7655197-1d78-4067-bf86-fcbea910ba3d/300x450",
+    ],
+    fav: false,
+  },
+  {
+    id: 10,
+    title: "Наблюдатель 2000",
+    kinopoisk: 6.3,
+    imdb: 6.1,
+    youtubesourse: "https://www.youtube.com/watch?v=TP0KawHpSoY",
+    undertitle: "The Watcher",
+    img: [
+      "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/d75be89a-4732-4477-b905-dc34f60f5959/300x450",
+    ],
+    fav: false,
+  },
+  {
+    id: 11,
+    title: "Контракт  2005",
+    kinopoisk: 6.2,
+    imdb: 6.1,
+    youtubesourse: "https://www.youtube.com/watch?v=LimJTVnSq7Q",
+    undertitle: "The Contract",
+    img: [
+      "https://avatars.mds.yandex.net/get-ott/1652588/2a0000019850beedfc0691a297d259ae8377/300x450",
+    ],
+    fav: false,
+  },
+  {
+    id: 12,
+    title: "Эффект колибри 2012",
+    kinopoisk: 6.4,
+    imdb: 6.4,
+    youtubesourse: "https://www.youtube.com/watch?v=HddTrOeKqQQ",
+    undertitle: "Hummingbird",
+    img: [
+      "https://avatars.mds.yandex.net/get-ott/13051577/2a00000198537373da57d5ace05d98b433d7/300x450",
+    ],
+    fav: false,
+  },
+  {
+    id: 13,
     title: "Пипец 2010",
     kinopoisk: 6.7,
     imdb: 7,
