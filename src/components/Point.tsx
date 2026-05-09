@@ -2,11 +2,10 @@ import { Paragh } from "../components/Paragh";
 import { Swip } from "../components/Swip";
 import { films } from "../data/Films";
 
-export const Avid = () => {
+export const Point = () => {
   return (
     <>
-      <Paragh title="УЖЕ ДОСТУПНЫЕ" />
-      <Swip films={films} />
+      <Paragh title="ТОЧКА ИНТЕРЕСА" />
     </>
   );
 };

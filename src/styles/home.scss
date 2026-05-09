@@ -1,19 +1,21 @@
 @use "./index.scss" as vars;
 
 main {
-  article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    padding: 2em;
-    p {
-      opacity: 60%;
-      width: 43%;
-      text-align: center;
-      font-size: 1.3em;
-      padding: 1.5em;
-      color: vars.$ft-color;
+  .Swip {
+    &__swiper {
+      padding: 0 2em 3em 2em;
+    }
+    &__slide {
+      width: 320px;
+    }
+    &__card {
+      &__img {
+        height: 500px;
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
     }
   }
 }
