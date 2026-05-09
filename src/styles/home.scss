@@ -1,9 +1,19 @@
+@use "./index.scss" as vars;
+
 main {
   article {
     display: flex;
-
+    align-items: center;
     justify-content: center;
-    flex-flow: row;
+    flex-flow: column;
     padding: 2em;
+    p {
+      opacity: 60%;
+      width: 43%;
+      text-align: center;
+      font-size: 1.3em;
+      padding: 1.5em;
+      color: vars.$ft-color;
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { Header } from "../components/Header";
+import { Avid } from "../components/Avid";
 import "../styles/home.scss";
 
 export const Home = () => {
@@ -42,7 +43,13 @@ export const Home = () => {
             fill="#FAFAFA"
           />
         </svg>
+        <p>
+          ЭТО УНИКАЛЬНОЕ ВЕБ-ПРИЛОЖЕНИЕ ДЛЯ ПРОСМОТРА ФИЛЬМОВ ИЗ ОБЩЕГО ДОСТУПА.
+          САЙТ НЕ ЯВЛЯЕТСЯ ПИРАТСКИМ - ВСЕ ФИЛЬМЫ ДОСТУПНЫ НА YOUTUBE И
+          АБСОЛЮТНО БЕСПЛАТНО.
+        </p>
       </article>
+      <Avid />
     </main>
   );
 };

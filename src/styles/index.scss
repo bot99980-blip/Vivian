@@ -25,3 +25,11 @@ $bc-color: #151515;
 body {
   background-color: $bc-color;
 }
+
+.paragh {
+  color: $ft-color;
+  font-size: 3em;
+  font-family: $bs-font;
+  font-weight: map-get($map: $ft, $key: black);
+  padding: 0.75em;
+}
