@@ -1,0 +1,103 @@
+@use "./index.scss" as vars;
+
+.recs {
+  padding: 2em;
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+
+  &__title {
+    text-align: center;
+    padding: 1em 0;
+
+    h1 {
+      color: vars.$ft-color;
+      font-size: 4em;
+      font-weight: map-get(vars.$ft, black);
+    }
+
+    p {
+      color: vars.$ft-opac;
+      font-size: 1.2em;
+      font-weight: map-get(vars.$ft, regular);
+      margin-top: 0.5em;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-flow: column;
+    gap: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__card {
+    display: flex;
+    flex-flow: row;
+    gap: 2em;
+    padding: 1.5em;
+    border: 1px solid rgba(vars.$ft-color, 0.1);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: rgba(vars.$ft-color, 0.3);
+      background: rgba(vars.$ft-color, 0.05);
+      transform: translateY(-3px);
+    }
+
+    &-img {
+      height: 300px;
+      flex-shrink: 0;
+
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-flow: column;
+      gap: 0.75em;
+      justify-content: center;
+
+      h2 {
+        color: vars.$ft-color;
+        font-size: 1.8em;
+        font-weight: map-get(vars.$ft, black);
+      }
+
+      h3 {
+        color: vars.$ft-opac;
+        font-size: 1.2em;
+        font-weight: map-get(vars.$ft, semibold);
+      }
+
+      p {
+        color: vars.$ft-opac;
+        font-size: 1em;
+        font-weight: map-get(vars.$ft, regular);
+        line-height: 1.5;
+        max-width: 600px;
+      }
+    }
+
+    &-rates {
+      display: flex;
+      gap: 2em;
+      margin-top: 0.5em;
+
+      span {
+        color: vars.$ft-color;
+        font-size: 0.9em;
+        font-weight: map-get(vars.$ft, medium);
+      }
+    }
+  }
+}

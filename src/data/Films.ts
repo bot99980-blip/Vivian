@@ -12,6 +12,7 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-ott/2385704/2a000001985103e4f636bb94a14d2a6a36e7/300x450",
     ],
     fav: true,
+    desc: "Преданный пес каждый день встречает хозяина на вокзале, что бы ни случилось. История, которая потрясла мир",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-ott/1672343/2a0000019852d6b43c175aa5b81c1f0dffdc/300x450",
     ],
     fav: true,
+    desc: "Семья бедняков обманом получает работу в доме богачей. Южнокорейская драмеди, которая взяла четыре «Оскара»",
   },
   {
     id: 3,
@@ -36,18 +38,20 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-ott/224348/2a00000198528f853134273ea785844e1c8a/300x450",
     ],
     fav: true,
+    desc: "Двое приставов расследуют побег пациентки из мрачной психбольницы. Параноидальный триллер с Леонардо ДиКаприо",
   },
   {
     id: 4,
-    title: "Астрал 2010",
-    kinopoisk: 6.8,
-    imdb: 6.8,
-    youtubesourse: "https://www.youtube.com/watch?v=XydqbTJL9fI",
-    undertitle: "Insidious",
+    title: "Брат 2  2000",
+    kinopoisk: 8.3,
+    imdb: 0,
+    youtubesourse: "https://www.youtube.com/watch?v=K9TRaGNnjEU",
+    undertitle: "Брат 2",
     img: [
-      "https://avatars.mds.yandex.net/get-ott/236744/2a0000019850bcd42fd0ebf8763b16203a03/300x450",
+      "https://avatars.mds.yandex.net/get-ott/1648503/2a00000198544678eafed36c46ab229ecd04/300x450",
     ],
-    fav: false,
+    fav: true,
+    desc: "Американцы знакомятся с Данилой Багровым и узнают, в чем сила. Сиквел о герое времени с мощным рок-саундтреком",
   },
   {
     id: 5,
@@ -60,6 +64,7 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-ott/12808873/2a0000019854a9569428328fa99b3f0e16d3/300x450",
     ],
     fav: true,
+    desc: "Дембель Данила Багров защищает слабых в Петербурге 1990-х. Фильм, сделавший Сергея Бодрова народным героем",
   },
   {
     id: 6,
@@ -72,6 +77,7 @@ export const films: FilmProps[] = [
       "https://upload.wikimedia.org/wikipedia/ru/1/19/Titanic_%28Official_Film_Poster%29.png",
     ],
     fav: true,
+    desc: "Запретная любовь на фоне гибели легендарного лайнера. Великий фильм-катастрофа — в отреставрированной версии",
   },
   {
     id: 7,
@@ -84,6 +90,7 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/770e2754-f886-4012-852d-63580984a310/300x450",
     ],
     fav: true,
+    desc: "Детский психолог открывает жуткую тайну маленького пациента. Грандиозная мистическая драма с Брюсом Уиллисом",
   },
   {
     id: 8,
@@ -96,6 +103,7 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/2cfb38ba-2c39-4ac5-b2ef-943b6d7c30e9/300x450",
     ],
     fav: false,
+    desc: "Бандит и детектив объединяются, чтобы поймать серийного убийцу. Дерзкий криминальный триллер из Южной Кореи",
   },
   {
     id: 9,
@@ -108,9 +116,23 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/d7655197-1d78-4067-bf86-fcbea910ba3d/300x450",
     ],
     fav: false,
+    desc: "Одинокий писатель-инвалид ищет новый смысл жизни в уютном городке у озера. Теплое драмеди с Морганом Фриманом",
   },
   {
     id: 10,
+    title: "Астрал 2010",
+    kinopoisk: 6.8,
+    imdb: 6.8,
+    youtubesourse: "https://www.youtube.com/watch?v=XydqbTJL9fI",
+    undertitle: "Insidious",
+    img: [
+      "https://avatars.mds.yandex.net/get-ott/236744/2a0000019850bcd42fd0ebf8763b16203a03/300x450",
+    ],
+    fav: false,
+    desc: "Злые духи вторгаются в жизнь семьи после переезда в новый дом. Мистические кошмары от создателей «Пилы»",
+  },
+  {
+    id: 11,
     title: "Наблюдатель 2000",
     kinopoisk: 6.3,
     imdb: 6.1,
@@ -120,9 +142,10 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/d75be89a-4732-4477-b905-dc34f60f5959/300x450",
     ],
     fav: false,
+    desc: "Агент ФБР противостоит неуловимому серийному убийце. Киану Ривз в напряженном триллере с отличным саундтреком",
   },
   {
-    id: 11,
+    id: 12,
     title: "Контракт  2005",
     kinopoisk: 6.2,
     imdb: 6.1,
@@ -132,9 +155,10 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-ott/1652588/2a0000019850beedfc0691a297d259ae8377/300x450",
     ],
     fav: false,
+    desc: "Бывший коп конвоирует беглого убийцу, на которого ведется охота. Бодрый тандем Моргана Фримана и Джона Кьюсака",
   },
   {
-    id: 12,
+    id: 13,
     title: "Эффект колибри 2012",
     kinopoisk: 6.4,
     imdb: 6.4,
@@ -144,9 +168,10 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-ott/13051577/2a00000198537373da57d5ace05d98b433d7/300x450",
     ],
     fav: false,
+    desc: "Бывший спецназовец попадает в мир криминала, выдавая себя за другого. Драматичный экшен с Джейсоном Стэйтемом",
   },
   {
-    id: 13,
+    id: 14,
     title: "Пипец 2010",
     kinopoisk: 6.7,
     imdb: 7,
@@ -156,5 +181,6 @@ export const films: FilmProps[] = [
       "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/dd3de54f-b80b-43bf-9596-2f69a115dda6/300x450",
     ],
     fav: false,
+    desc: "Подросток в костюме супергероя выходит на улицу бороться со злом. Комедийный боевик по одноименному комиксу",
   },
 ];

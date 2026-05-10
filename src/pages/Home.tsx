@@ -7,9 +7,9 @@ import Video from "../assets/2457193876021.mp4";
 export const Home = () => {
   return (
     <main>
-      {/* <video loop autoPlay muted width="100%">
+      <video loop autoPlay muted width="100%">
         <source src={Video} type="video/mp4" />
-      </video> */}
+      </video>
       <Header />
       <Avid />
       {/* <Point /> */}

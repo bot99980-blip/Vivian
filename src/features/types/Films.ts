@@ -7,4 +7,5 @@ export interface FilmProps {
   imdb: number;
   youtubesourse: string;
   fav: boolean;
+  desc: string;
 }

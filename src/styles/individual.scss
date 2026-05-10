@@ -9,19 +9,49 @@
   gap: 2.5em;
   padding: 2.5em;
   .info {
-    justify-content: center;
-    align-items: center;
     display: flex;
+    justify-content: center;
     flex-flow: row;
     gap: 1.5em;
     .text {
-      .rate {
-        height: 50px;
-        width: 50px;
+      width: 40%;
+      display: flex;
+      flex-flow: column;
+      gap: 1.25em;
+      h1 {
+        color: vars.$ft-color;
+        font-size: 3.25em;
+        font-weight: map-get(vars.$ft, black);
+      }
+      h2 {
+        font-size: 1.775em;
+        font-weight: map-get(vars.$ft, semibold);
+        color: vars.$ft-opac;
+      }
+      .rates {
+        display: flex;
+        flex-flow: row;
+        gap: 3em;
+      }
+      h3 {
+        color: vars.$ft-color;
+        display: flex;
+        align-items: center;
+        gap: 0.75em;
+        font-size: 1.25em;
+        .rate {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      h4 {
+        font-size: 1.85em;
+        color: vars.$ft-color;
+        font-weight: map-get(vars.$ft, regular);
       }
     }
     .img {
-      height: 30em;
+      height: 40em;
       img {
         height: 100%;
         width: auto;

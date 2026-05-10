@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+IE:wght@100..400&family=Unbounded:wght@200..900&display=swap");
 
-$bs-font: "jost";
+$bs-font: "Montserrat";
 
 $ft: (
   black: 900,
@@ -9,9 +9,9 @@ $ft: (
   medium: 500,
 );
 
-$ft-color: #151515;
+$ft-color: #e9e9e9;
 $ft-opac: #959595;
-$bc-color: #e9e9e9;
+$bc-color: #151515;
 
 @keyframes opac {
   from {
@@ -21,6 +21,14 @@ $bc-color: #e9e9e9;
   to {
     transform: translateY(0%);
     opacity: 100%;
+  }
+}
+
+main {
+  video {
+    position: fixed;
+    z-index: -534;
+    filter: brightness(0.2) saturate(0);
   }
 }
 
@@ -37,10 +45,11 @@ body {
 }
 
 .paragh {
+  text-align: center;
   color: $ft-color;
   font-size: 3em;
   font-family: $bs-font;
-  font-weight: map-get($map: $ft, $key: black);
+  font-weight: map-get($ft, black);
   padding: 0.35em 0.75em;
 }
 
@@ -54,7 +63,7 @@ body {
     color: $ft-color;
     font-size: 3em;
     font-family: $bs-font;
-    font-weight: map-get($map: $ft, $key: black);
+    font-weight: map-get($ft, black);
   }
 }
 
