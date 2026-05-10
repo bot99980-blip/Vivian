@@ -90,13 +90,19 @@
 
     &-rates {
       display: flex;
-      gap: 2em;
+      gap: 3em;
       margin-top: 0.5em;
 
       span {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
         color: vars.$ft-color;
-        font-size: 0.9em;
+        font-size: 1.5em;
         font-weight: map-get(vars.$ft, medium);
+        .rate {
+          border-radius: 10px;
+        }
       }
     }
   }

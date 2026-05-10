@@ -44,14 +44,13 @@ export const Individual = ({ films }: IndividualProps) => {
               </h3>
             </div>
             <h4>{film.desc}</h4>
+            <ReactPlayer
+              src={film.youtubesourse}
+              controls={true}
+              light={film.img[0]}
+            />
           </div>
         </div>
-
-        <ReactPlayer
-          src={film.youtubesourse}
-          controls={true}
-          light={film.img[0]}
-        />
       </div>
     </main>
   );

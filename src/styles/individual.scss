@@ -32,6 +32,9 @@
         display: flex;
         flex-flow: row;
         gap: 3em;
+        .rate {
+          border-radius: 10px;
+        }
       }
       h3 {
         color: vars.$ft-color;
@@ -53,6 +56,7 @@
     .img {
       height: 40em;
       img {
+        border-radius: 10px;
         height: 100%;
         width: auto;
         object-fit: contain;

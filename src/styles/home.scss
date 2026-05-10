@@ -10,6 +10,7 @@ main {
     }
     &__card {
       &__img {
+        border-radius: 10px;
         height: 500px;
         img {
           height: 100%;
