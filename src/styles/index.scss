@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+IE:wght@100..400&family=Unbounded:wght@200..900&display=swap");
 
-$bs-font: "Montserrat";
+$bs-font: "jost";
 
 $ft: (
   black: 900,
@@ -11,7 +11,7 @@ $ft: (
 
 $ft-color: #151515;
 $ft-opac: #959595;
-$bc-color: #fafafa;
+$bc-color: #e9e9e9;
 
 @keyframes opac {
   from {

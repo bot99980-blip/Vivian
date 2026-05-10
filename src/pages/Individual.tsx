@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 import React from "react";
 import ReactPlayer from "react-player";
 import "../styles/individual.scss";
+import imdb from "../assets/imdb.png";
 
 interface IndividualProps {
   films: FilmProps[];
@@ -22,20 +23,25 @@ export const Individual = ({ films }: IndividualProps) => {
     <main>
       <Header />
       <div className="indiv">
-        <Link to="/">x</Link>
-        <h1>{film.title}</h1>
-        <img src={film.img[0]} alt={film.title} />
-        <p>{film.undertitle}</p>
-        <p>Кинопоиск: {film.kinopoisk}</p>
-        <p>IMDb: {film.imdb}</p>
+        <div className="info">
+          <div className="img">
+            <img src={film.img[0]} alt={film.title} />
+          </div>
+          <div className="text">
+            <h1>{film.title}</h1>
+            <p>{film.undertitle} 18+</p>
+            <p>Кинопоиск: {film.kinopoisk}</p>
+            <p>
+              <img className="rate" src={imdb} alt="" /> {film.imdb}
+            </p>
+          </div>
+        </div>
+
         <ReactPlayer
           src={film.youtubesourse}
-          width="100%"
-          height="100%"
           controls={true}
           light={film.img[0]}
         />
-        <a href={film.youtubesourse}>Смотреть</a>
       </div>
     </main>
   );

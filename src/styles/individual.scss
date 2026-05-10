@@ -1,1 +1,32 @@
 @use "./index.scss" as vars;
+
+.indiv {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  gap: 2.5em;
+  padding: 2.5em;
+  .info {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    gap: 1.5em;
+    .text {
+      .rate {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    .img {
+      height: 30em;
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

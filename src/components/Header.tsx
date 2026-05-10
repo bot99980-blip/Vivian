@@ -5,9 +5,13 @@ export const Header = () => {
   return (
     <header>
       <nav>
-        <Link to="/ds">ИСТОЧНИКИ</Link>
-        <Link to="/d">ТОП 30</Link>
-        <Link to="/">
+        <div className="links">
+          <Link to="/ds">ИСТОЧНИКИ</Link>
+          <Link to="/d">ТОП-30</Link>
+          <Link to="/article">ПАМЯТКА</Link>
+          <Link to="/d">РЕКОМЕНДАЦИИ</Link>
+        </div>
+        <Link className="logo" to="/">
           <svg
             width="75"
             height="69"
@@ -21,8 +25,6 @@ export const Header = () => {
             />
           </svg>
         </Link>
-        <Link to="/article">ПАМЯТКА</Link>
-        <Link to="/d">РЕКОМЕНДАЦИИ</Link>
       </nav>
     </header>
   );

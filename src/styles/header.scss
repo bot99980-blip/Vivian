@@ -1,27 +1,36 @@
 @use "./index.scss" as vars;
 
 header {
-  height: 60px;
+  height: 50px;
   place-content: center;
-  border-bottom: 2px solid #fafafa;
+  border-bottom: 2px solid #151515;
   nav {
-    margin-left: 72px;
+    .links {
+      display: flex;
+      gap: 1em;
+      flex-flow: row;
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 0.1%;
+    }
     display: flex;
-    gap: 1em;
     flex-flow: row;
-    justify-content: center;
+    padding: 0 2.5em;
+    justify-content: space-between;
     align-items: center;
     a {
       text-decoration: none;
-      font-size: 1em;
+      font-size: 0.9em;
       color: vars.$ft-color;
       font-weight: map-get(vars.$ft, black);
       &:hover {
         transform: scale(1.1);
       }
       svg {
-        height: 45px;
-        width: 50px;
+        height: 50px;
+        width: 45px;
       }
     }
   }
