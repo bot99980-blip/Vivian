@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
 import type { FilmProps } from "../features/types/Films";
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../styles/home.scss";
@@ -15,19 +13,26 @@ interface SwiperProps {
   films: FilmProps[];
 }
 
-export const Swip: React.FC<SwiperProps> = ({ films }) => {
+export const Swip = ({ films }: SwiperProps) => {
   return (
     <div className="Swip">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]} // Добавить Autoplay
         slidesPerView="auto"
         spaceBetween={40}
         grabCursor={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: true,
+        }}
+        loop={true}
+        speed={11000}
         className="Swip__swiper"
       >
         {films.map((film, index) => (
           <SwiperSlide key={`${film.id}-${index}`} className="Swip__slide">
-            <Link to={film.youtubesourse} className="Swip__card">
+            <Link to={`/film/${film.id}`} className="Swip__card">
               <img className="Swip__card__img" src={film.img[0]} alt="" />
             </Link>
           </SwiperSlide>
