@@ -7,7 +7,6 @@ export const Header = () => {
       <nav>
         <div className="links">
           <Link to="/ds">ИСТОЧНИКИ</Link>
-          <Link to="/d">ТОП-30</Link>
           <Link to="/article">ПАМЯТКА</Link>
           <Link to="/recommendations">РЕКОМЕНДАЦИИ</Link>
         </div>
