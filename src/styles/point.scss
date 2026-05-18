@@ -1,0 +1,202 @@
+// styles/point.scss
+@use "./index.scss" as vars;
+
+.point {
+  padding: 0 2em 3em 2em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2em;
+
+  &__container {
+    display: flex;
+    flex-flow: row;
+    gap: 3em;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__poster {
+    height: 600px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column;
+    gap: 1.5em;
+    flex: 1;
+  }
+
+  &__title-link {
+    text-decoration: none;
+    width: fit-content;
+
+    &:hover .point__title {
+      color: rgba(vars.$ft-color, 0.7);
+    }
+  }
+
+  &__title {
+    color: vars.$ft-color;
+    font-size: 3.5em;
+    font-weight: map-get(vars.$ft, black);
+    line-height: 1.1;
+    transition: color 0.3s ease;
+  }
+
+  &__undertitle {
+    color: vars.$ft-opac;
+    font-size: 1.8em;
+    font-weight: map-get(vars.$ft, semibold);
+  }
+
+  &__rates {
+    display: flex;
+    gap: 2.5em;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    span {
+      color: vars.$ft-color;
+      font-size: 1.5em;
+      font-weight: map-get(vars.$ft, medium);
+    }
+  }
+
+  &__desc {
+    font-size: 1.55em;
+    color: vars.$ft-color;
+    font-weight: map-get(vars.$ft, regular);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  &__watch-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    padding: 0.75em 1.5em;
+    background: vars.$ft-color;
+    color: vars.$bc-color;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: map-get(vars.$ft, black);
+    font-size: 1em;
+    width: fit-content;
+    transition: all 0.3s ease;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: rgba(vars.$ft-color, 0.8);
+      transform: translateY(-2px);
+
+      svg {
+        transform: translateX(5px);
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-top: auto;
+    padding-top: 1em;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(vars.$ft-color, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    color: vars.$ft-color;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      background: rgba(vars.$ft-color, 0.1);
+      border-color: vars.$ft-color;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__counter {
+    color: vars.$ft-opac;
+    font-size: 1.1em;
+    font-weight: map-get(vars.$ft, medium);
+    min-width: 70px;
+    text-align: center;
+  }
+
+  &__dots {
+    display: flex;
+    gap: 0.75em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(vars.$ft-color, 0.3);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+
+    &:hover {
+      border-color: vars.$ft-color;
+      background: rgba(vars.$ft-color, 0.3);
+    }
+
+    &--active {
+      background: vars.$ft-color;
+      border-color: vars.$ft-color;
+      transform: scale(1.2);
+    }
+  }
+}

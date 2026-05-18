@@ -6,17 +6,25 @@ import { Article } from "./pages/Article";
 import { Recommendations } from "./pages/Recommendations";
 import { Individual } from "./pages/Individual";
 import { films } from "./data/Films";
+import { Footer } from "./components/Footer";
+import Video from "./assets/2457193876021.mp4";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/recommendations" element={<Recommendations />} />
-        <Route path="/film/:id" element={<Individual films={films} />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/article" element={<Article />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="app">
+        <video className="bg" loop autoPlay muted width="100%">
+          <source src={Video} type="video/mp4" />
+        </video>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/film/:id" element={<Individual films={films} />} />
+          <Route path="/article" element={<Article />} />
+          <Route path="/recommendations" element={<Recommendations />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

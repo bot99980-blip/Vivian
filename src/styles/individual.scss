@@ -8,12 +8,12 @@
   flex-flow: column;
   gap: 2.5em;
   padding: 2.5em;
-  .info {
+  &__info {
     display: flex;
     justify-content: center;
     flex-flow: row;
     gap: 1.5em;
-    .text {
+    &__text {
       width: 40%;
       display: flex;
       flex-flow: column;
@@ -28,11 +28,11 @@
         font-weight: map-get(vars.$ft, semibold);
         color: vars.$ft-opac;
       }
-      .rates {
+      &__rates {
         display: flex;
         flex-flow: row;
         gap: 3em;
-        .rate {
+        &__rate {
           border-radius: 10px;
         }
       }
@@ -53,7 +53,7 @@
         font-weight: map-get(vars.$ft, regular);
       }
     }
-    .img {
+    &__img {
       height: 40em;
       img {
         border-radius: 10px;

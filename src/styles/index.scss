@@ -24,12 +24,10 @@ $bc-color: #151515;
   }
 }
 
-main {
-  video {
-    position: fixed;
-    z-index: -534;
-    filter: brightness(0.2) saturate(0);
-  }
+.bg {
+  position: fixed;
+  z-index: -534;
+  filter: brightness(0.2) saturate(0);
 }
 
 * {

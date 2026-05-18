@@ -6,15 +6,13 @@ import "../styles/recommendations.scss";
 import Video from "../assets/2457193876021.mp4";
 import imdb from "../assets/imdb.png";
 import kinopoisk from "../assets/unnamed.png";
+import { use, useState } from "react";
 
 export const Recommendations = () => {
   const favFilms = films.filter((film) => film.fav === true);
 
   return (
     <main>
-      <video loop autoPlay muted width="100%">
-        <source src={Video} type="video/mp4" />
-      </video>
       <Header />
       <div className="recs">
         <div className="recs__title">
