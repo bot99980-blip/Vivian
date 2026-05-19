@@ -1,11 +1,11 @@
 import type { FilmProps } from "../features/types/Films";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Header } from "../components/Header";
 import ReactPlayer from "react-player";
 import "../styles/individual.scss";
 import imdb from "../assets/imdb.png";
 import kinopoisk from "../assets/unnamed.png";
-import Video from "../assets/2457193876021.mp4";
+
 
 interface IndividualProps {
   films: FilmProps[];

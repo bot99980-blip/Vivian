@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation,  Autoplay } from "swiper/modules";
 import type { FilmProps } from "../features/types/Films";
 import { Link } from "react-router-dom";
 
