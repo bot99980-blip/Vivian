@@ -42,9 +42,7 @@ export const Footer = () => {
           <p className="footer__copyright">
             © 2026 Vivian. Все права защищены.
           </p>
-          <p className="footer__disclaimer">
-            Сайт не является пиратским. Все фильмы находятся в открытом доступе.
-          </p>
+          
         </div>
       </div>
     </footer>
