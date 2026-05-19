@@ -9,6 +9,6 @@ React Player
 
 # Запуск
 ```bash
- npm install
+ npm run build
  npm run preview
 ```
