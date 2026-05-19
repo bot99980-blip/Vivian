@@ -17,7 +17,7 @@ export const Swip = ({ films }: SwiperProps) => {
   return (
     <div className="Swip">
       <Swiper
-        modules={[Navigation, Autoplay]} // Добавить Autoplay
+        modules={[Navigation, Autoplay]} 
         slidesPerView="auto"
         spaceBetween={40}
         grabCursor={true}
