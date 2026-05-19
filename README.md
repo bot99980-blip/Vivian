@@ -10,5 +10,5 @@ React Player
 # Запуск
 ```bash
  npm install
- npm run build | npm run dev
+ npm run dev
 ```
