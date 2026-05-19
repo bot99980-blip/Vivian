@@ -1,7 +1,7 @@
 # Инструменты
-React + TypeScript + Vite + Router
-React Compiler
-React Player
+- React + TypeScript + Vite + Router
+- React Compiler
+- React Player
 
 # Информация
 - Куртуков Купцевич
