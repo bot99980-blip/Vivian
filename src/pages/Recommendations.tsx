@@ -1,26 +1,27 @@
-
-import { Header } from "../components/Header";
 import { Link } from "react-router-dom";
-import { films } from "../data/Films";
+import { useFavoriteFilms } from "../features/hooks/useFilms";
 import "../styles/recommendations.scss";
-import imdb from "../assets/imdb.png";
-import kinopoisk from "../assets/unnamed.png";
-
 
 export const Recommendations = () => {
-  const favFilms = films.filter((film) => film.fav === true);
+  const { films, loading, error } = useFavoriteFilms();
+
+  if (loading) return <main>Загрузка...</main>;
+  if (error) return <main>{error}</main>;
 
   return (
     <main>
-      <Header />
       <div className="recs">
         <div className="recs__title">
           <h1>РЕКОМЕНДАЦИИ</h1>
           <p>Фильмы, которые стоит посмотреть</p>
         </div>
         <div className="recs__grid">
-          {favFilms.map((film) => (
-            <Link to={`/film/${film.id}`} key={film.id} className="recs__card">
+          {films.map((film) => (
+            <Link
+              to={`/film/${film.firebaseId}`}
+              key={film.firebaseId}
+              className="recs__card"
+            >
               <div className="recs__card-img">
                 <img src={film.img[0]} alt={film.title} />
               </div>
@@ -29,13 +30,8 @@ export const Recommendations = () => {
                 <h3>{film.undertitle}</h3>
                 <p>{film.desc}</p>
                 <div className="recs__card-rates">
-                  <span>
-                    <img className="rate" src={kinopoisk} alt="" />{" "}
-                    {film.kinopoisk}
-                  </span>
-                  <span>
-                    <img className="rate" src={imdb} alt="" /> {film.imdb}
-                  </span>
+                  <span>Кинопоиск: {film.kinopoisk}</span>
+                  <span>IMDb: {film.imdb}</span>
                 </div>
               </div>
             </Link>

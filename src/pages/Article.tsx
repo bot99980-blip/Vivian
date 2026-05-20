@@ -1,9 +1,6 @@
-import { Header } from "../components/Header";
-
 export const Article = () => {
   return (
     <>
-      <Header />
       <article className="article">
         <svg
           width="171"
