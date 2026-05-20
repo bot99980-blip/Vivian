@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-
+import { Load } from "../components/Load";
 import { useFilm } from "../features/hooks/useFilms";
 import ReactPlayer from "react-player";
 import "../styles/individual.scss";
@@ -10,7 +10,12 @@ export const Individual = () => {
   const { id } = useParams<{ id: string }>();
   const { film, load, err } = useFilm(id || "");
 
-  if (load) return <main>Загрузка...</main>;
+  if (load)
+    return (
+      <main>
+        <Load />
+      </main>
+    );
   if (err) return <main>{err}</main>;
   if (!film) return <main>Фильм не найден</main>;
 

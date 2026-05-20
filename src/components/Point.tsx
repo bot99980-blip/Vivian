@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Load } from "../components/Load";
 import { Link } from "react-router-dom";
 import { Paragh } from "../components/Paragh";
 import { useFavoriteFilms } from "../features/hooks/useFilms";
@@ -10,7 +11,12 @@ export const Point = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { films, load, err } = useFavoriteFilms();
 
-  if (load) return <div>Загрузка...</div>;
+  if (load)
+    return (
+      <div>
+        <Load />
+      </div>
+    );
   if (err) return <div>{err}</div>;
   if (films.length === 0) return <div>Нет фильмов</div>;
 

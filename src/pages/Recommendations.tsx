@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
 import { useFavoriteFilms } from "../features/hooks/useFilms";
 import "../styles/recommendations.scss";
+import { Load } from "../components/Load";
 import imdb from "../assets/imdb.png";
 import kinopoisk from "../assets/unnamed.png";
 
 export const Recommendations = () => {
   const { films, load, err } = useFavoriteFilms();
 
-  if (load) return <main>Загрузка...</main>;
+  if (load)
+    return (
+      <main>
+        <Load />
+      </main>
+    );
   if (err) return <main>{err}</main>;
 
   return (

@@ -1,12 +1,18 @@
 import { Paragh } from "../components/Paragh";
 import { Swip } from "../components/Swip";
+import { Load } from "../components/Load";
 import { useFilms } from "../features/hooks/useFilms";
 
 export const Avid = () => {
-  const { films, load, e } = useFilms();
+  const { films, load, err } = useFilms();
 
-  if (load) return <div>Загрузка...</div>;
-  if (e) return <div>{e}</div>;
+  if (load)
+    return (
+      <div>
+        <Load />
+      </div>
+    );
+  if (err) return <div>{err}</div>;
 
   return (
     <>
