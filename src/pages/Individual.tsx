@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Load } from "../components/Load";
 import { useFilm } from "../features/hooks/useFilms";
 import ReactPlayer from "react-player";
