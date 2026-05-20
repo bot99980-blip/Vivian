@@ -1,3 +1,4 @@
+// локальное хранение НО ОНО НЕ ИСПОЛЬЗУЕТЬСЯ - ВСЕ БЕРЕТЬСЯ ИЗ FIREBASE API
 import type { FilmProps } from "../features/types/Films";
 
 export const films: FilmProps[] = [
