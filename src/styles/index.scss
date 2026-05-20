@@ -15,10 +15,10 @@ $bc-color: #151515;
 
 @keyframes logoanim {
   from {
-    transform: rotate(360deg);
+    transform: rotate(360);
   }
   to {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
 }
 
@@ -34,11 +34,14 @@ $bc-color: #151515;
 }
 
 .load {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+
   width: 100%;
-  animation: logoanim 1s ease;
   &__svg {
-    animation: logoanim 1s ease;
+    height: 50vh;
+    width: 50vw;
+    animation: logoanim infinite;
   }
 }
 
