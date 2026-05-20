@@ -1,42 +1,4 @@
 import type { FilmProps } from "../features/types/Films";
-import { getFilmByTitle } from "../services/omdbApi";
-
-// Функция для получения данных о фильме из OMDB API
-export const fetchFilmFromOmdb = async (title: string, year?: string): Promise<FilmProps | null> => {
-  try {
-    const omdbData = await getFilmByTitle(title, year);
-    
-    // Извлекаем рейтинги
-    let kinopoisk = 0;
-    let imdb = 0;
-    
-    if (omdbData.Ratings) {
-      omdbData.Ratings.forEach(rating => {
-        if (rating.Source === 'Internet Movie Database') {
-          imdb = parseFloat(rating.Value.replace('/10', ''));
-        }
-      });
-    }
-    
-    // Преобразуем данные OMDB в формат FilmProps
-    return {
-      id: omdbData.imdbID,
-      title: `${omdbData.Title} ${omdbData.Year}`,
-      undertitle: omdbData.Title,
-      img: [omdbData.Poster !== 'N/A' ? omdbData.Poster : ''],
-      kinopoisk,
-      imdb,
-      youtubesourse: '',
-      fav: false,
-      desc: omdbData.Plot || '',
-      imdbID: omdbData.imdbID,
-      year: omdbData.Year,
-    };
-  } catch (error) {
-    console.error('Ошибка при получении данных из OMDB:', error);
-    return null;
-  }
-};
 
 export const films: FilmProps[] = [
   {

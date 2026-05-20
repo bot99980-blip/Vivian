@@ -5,7 +5,6 @@ import ReactPlayer from "react-player";
 import "../styles/individual.scss";
 import imdb from "../assets/imdb.png";
 import kinopoisk from "../assets/unnamed.png";
-import { useOmdbFilm } from "../hooks/useOmdbFilm";
 
 interface IndividualProps {
   films: FilmProps[];
@@ -14,32 +13,10 @@ interface IndividualProps {
 export const Individual = ({ films }: IndividualProps) => {
   const { id } = useParams<{ id: string }>();
 
-  // Пытаемся найти фильм в локальном массиве
-  const localFilm = films.find((f) => f.id === Number(id));
-  
-  // Если фильм найден локально, используем его данные для поиска в OMDB
-  const { film: omdbFilm, loading, error } = useOmdbFilm({ 
-    title: localFilm?.undertitle || '', 
-    year: localFilm?.year 
-  });
-
-  // Приоритет: OMDB данные > локальные данные
-  const film = omdbFilm || localFilm;
+  const film = films.find((f) => f.id === Number(id));
 
   if (!film) {
     return <main>Фильм не найден</main>;
-  }
-
-  if (loading) {
-    return <main>Загрузка...</main>;
-  }
-
-  if (error) {
-    console.warn('OMDB ошибка:', error);
-    // Продолжаем с локальными данными если есть
-    if (!localFilm) {
-      return <main>{error}</main>;
-    }
   }
 
   return (
