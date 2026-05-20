@@ -1,4 +1,3 @@
-// src/services/filmService.ts
 import {
   collection,
   getDocs,

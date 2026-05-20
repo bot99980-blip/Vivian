@@ -4,5 +4,9 @@
     "location": "eur3",
     "rules": "Y",
     "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }

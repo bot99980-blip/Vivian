@@ -36,8 +36,9 @@ $bc-color: #151515;
 .load {
   height: 100%;
   width: 100%;
+  animation: logoanim 1s ease;
   &__svg {
-    animation: logoanim infinite;
+    animation: logoanim 1s ease;
   }
 }
 
