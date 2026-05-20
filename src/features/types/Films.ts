@@ -1,5 +1,6 @@
 export interface FilmProps {
-  id: number | string;
+  id?: string;
+  firebaseId?: string;
   title: string;
   img: string[];
   undertitle: string;
@@ -8,6 +9,4 @@ export interface FilmProps {
   youtubesourse: string;
   fav: boolean;
   desc: string;
-  imdbID?: string;
-  year?: string;
 }
