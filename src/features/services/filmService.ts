@@ -25,7 +25,7 @@ export const getAllFilms = async (): Promise<FilmProps[]> => {
 
     return films;
   } catch (er) {
-    console.log("Ошибка при получении фильмов:", er);
+    console.log(er);
     throw er;
   }
 };
@@ -65,7 +65,7 @@ export const getFavoriteFilms = async (): Promise<FilmProps[]> => {
 
     return films;
   } catch (er) {
-    console.log("Ошибка при получении избранных фильмов:", er);
+    console.log(er);
     throw er;
   }
 };
