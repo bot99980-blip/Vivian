@@ -1,12 +1,11 @@
-// pages/Recommendations.tsx
+
 import { Header } from "../components/Header";
 import { Link } from "react-router-dom";
 import { films } from "../data/Films";
 import "../styles/recommendations.scss";
-import Video from "../assets/2457193876021.mp4";
 import imdb from "../assets/imdb.png";
 import kinopoisk from "../assets/unnamed.png";
-import { use, useState } from "react";
+
 
 export const Recommendations = () => {
   const favFilms = films.filter((film) => film.fav === true);
