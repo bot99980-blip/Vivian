@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { Link } from "react-router-dom";
 import { Paragh } from "../components/Paragh";
 import { useFavoriteFilms } from "../features/hooks/useFilms";
