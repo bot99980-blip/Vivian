@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { useFavoriteFilms } from "../features/hooks/useFilms";
 import "../styles/recommendations.scss";
+import imdb from "../assets/imdb.png";
+import kinopoisk from "../assets/unnamed.png";
 
 export const Recommendations = () => {
-  const { films, loading, error } = useFavoriteFilms();
+  const { films, load, err } = useFavoriteFilms();
 
-  if (loading) return <main>Загрузка...</main>;
-  if (error) return <main>{error}</main>;
+  if (load) return <main>Загрузка...</main>;
+  if (err) return <main>{err}</main>;
 
   return (
     <main>
@@ -30,8 +32,12 @@ export const Recommendations = () => {
                 <h3>{film.undertitle}</h3>
                 <p>{film.desc}</p>
                 <div className="recs__card-rates">
-                  <span>Кинопоиск: {film.kinopoisk}</span>
-                  <span>IMDb: {film.imdb}</span>
+                  <span>
+                    <img src={kinopoisk} alt="" /> {film.kinopoisk}
+                  </span>
+                  <span>
+                    <img src={imdb} alt="" /> {film.imdb}
+                  </span>
                 </div>
               </div>
             </Link>

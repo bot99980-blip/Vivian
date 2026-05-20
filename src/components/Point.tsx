@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Paragh } from "../components/Paragh";
-import { useFilms } from "../features/hooks/useFilms";
+import { useFavoriteFilms } from "../features/hooks/useFilms";
 import "../styles/point.scss";
 import imdb from "../assets/imdb.png";
 import kinopoisk from "../assets/unnamed.png";
 
 export const Point = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { films, loading, error } = useFilms();
+  const { films, load, err } = useFavoriteFilms();
 
-  if (loading) return <div>Загрузка...</div>;
-  if (error) return <div>{error}</div>;
+  if (load) return <div>Загрузка...</div>;
+  if (err) return <div>{err}</div>;
   if (films.length === 0) return <div>Нет фильмов</div>;
 
   const handleNext = () => {

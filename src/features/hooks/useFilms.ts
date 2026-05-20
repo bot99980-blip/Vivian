@@ -1,4 +1,3 @@
-// src/hooks/useFilms.ts
 import { useState, useEffect } from "react";
 import {
   getAllFilms,
@@ -7,75 +6,72 @@ import {
 } from "../services/filmService";
 import type { FilmProps } from "../types/Films";
 
-// Хук для получения всех фильмов
 export const useFilms = () => {
   const [films, setFilms] = useState<FilmProps[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [load, setload] = useState(true);
+  const [err, seterr] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchFilms = async () => {
       try {
-        setLoading(true);
+        setload(true);
         const data = await getAllFilms();
         setFilms(data);
       } catch (err) {
-        setError("Ошибка при загрузке фильмов");
-        console.error(err);
+        seterr("useFilms");
+        console.log(err);
       } finally {
-        setLoading(false);
+        setload(false);
       }
     };
 
     fetchFilms();
   }, []);
 
-  return { films, loading, error };
+  return { films, load, err };
 };
 
-// Хук для получения избранных фильмов
 export const useFavoriteFilms = () => {
   const [films, setFilms] = useState<FilmProps[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [load, setload] = useState(true);
+  const [err, seterr] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchFilms = async () => {
       try {
-        setLoading(true);
+        setload(true);
         const data = await getFavoriteFilms();
         setFilms(data);
       } catch (err) {
-        setError("Ошибка при загрузке избранных фильмов");
-        console.error(err);
+        seterr("useFavoriteFilms");
+        console.log(err);
       } finally {
-        setLoading(false);
+        setload(false);
       }
     };
 
     fetchFilms();
   }, []);
 
-  return { films, loading, error };
+  return { films, load, err };
 };
 
-// Хук для получения одного фильма
 export const useFilm = (id: string) => {
   const [film, setFilm] = useState<FilmProps | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [load, setload] = useState(true);
+  const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchFilm = async () => {
       try {
-        setLoading(true);
+        setload(true);
         const data = await getFilmById(id);
         setFilm(data);
       } catch (err) {
-        setError("Ошибка при загрузке фильма");
-        console.error(err);
+        setErr("useFilm");
+        console.log(err);
       } finally {
-        setLoading(false);
+        setload(false);
       }
     };
 
@@ -84,5 +80,5 @@ export const useFilm = (id: string) => {
     }
   }, [id]);
 
-  return { film, loading, error };
+  return { film, load, err };
 };

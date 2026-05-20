@@ -3,10 +3,10 @@ import { Swip } from "../components/Swip";
 import { useFilms } from "../features/hooks/useFilms";
 
 export const Avid = () => {
-  const { films, loading, error } = useFilms();
+  const { films, load, e } = useFilms();
 
-  if (loading) return <div>Загрузка...</div>;
-  if (error) return <div>{error}</div>;
+  if (load) return <div>Загрузка...</div>;
+  if (e) return <div>{e}</div>;
 
   return (
     <>
