@@ -10,9 +10,13 @@
 - Куртуков
 - Сайт для просмотра фильмов
 
-# Запуск
+# Запуск локально
 
 ```bash
  npm run build
  npm run preview
 ```
+
+# Запуск на сервере firebase
+
+- заходим https://vivian-f9048.web.app/
