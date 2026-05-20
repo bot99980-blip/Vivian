@@ -6,12 +6,16 @@ import { Individual } from "./pages/Individual";
 import { Recommendations } from "./pages/Recommendations";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import Video from "./assets/2457193876021.mp4";
 import "./styles/index.scss";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app">
+        <video className="bg" loop autoPlay muted width="100%">
+          <source src={Video} type="video/mp4" />
+        </video>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
