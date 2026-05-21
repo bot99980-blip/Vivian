@@ -9,14 +9,12 @@ import {
 import { db } from "../services/config";
 import type { FilmProps } from "../types/Films";
 
-const COLLECTION_NAME = "films";
-
 export const getAllFilms = async (): Promise<FilmProps[]> => {
   try {
-    const querySnapshot = await getDocs(collection(db, COLLECTION_NAME));
+    const snap = await getDocs(collection(db, "films"));
     const films: FilmProps[] = [];
 
-    querySnapshot.forEach((doc) => {
+    snap.forEach((doc) => {
       films.push({
         firebaseId: doc.id,
         ...doc.data(),
@@ -32,13 +30,13 @@ export const getAllFilms = async (): Promise<FilmProps[]> => {
 
 export const getFilmById = async (id: string): Promise<FilmProps | null> => {
   try {
-    const docRef = doc(db, COLLECTION_NAME, id);
-    const docSnap = await getDoc(docRef);
+    const docref = doc(db, "films", id);
+    const docsnap = await getDoc(docref);
 
-    if (docSnap.exists()) {
+    if (docsnap.exists()) {
       return {
-        firebaseId: docSnap.id,
-        ...docSnap.data(),
+        firebaseId: docsnap.id,
+        ...docsnap.data(),
       } as FilmProps;
     }
 
@@ -51,12 +49,12 @@ export const getFilmById = async (id: string): Promise<FilmProps | null> => {
 
 export const getFavoriteFilms = async (): Promise<FilmProps[]> => {
   try {
-    const q = query(collection(db, COLLECTION_NAME), where("fav", "==", true));
+    const q = query(collection(db, "films"), where("fav", "==", true));
 
-    const querySnapshot = await getDocs(q);
+    const snap = await getDocs(q);
     const films: FilmProps[] = [];
 
-    querySnapshot.forEach((doc) => {
+    snap.forEach((doc) => {
       films.push({
         firebaseId: doc.id,
         ...doc.data(),
