@@ -61,9 +61,6 @@
       color: vars.$ft-color;
       font-size: 1.1em;
       font-weight: map-get(vars.$ft, black);
-      margin-bottom: 0.5em;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     a {
@@ -73,7 +70,6 @@
       font-weight: map-get(vars.$ft, medium);
       transition: all 0.3s ease;
       position: relative;
-      width: fit-content;
 
       &::after {
         content: "";
@@ -111,6 +107,10 @@
   }
 
   &__copyright {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
     color: vars.$ft-opac;
     font-size: 0.85em;
     font-weight: map-get(vars.$ft, medium);

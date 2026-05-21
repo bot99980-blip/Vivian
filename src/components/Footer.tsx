@@ -40,9 +40,9 @@ export const Footer = () => {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © 2026 Vivian. Все права защищены.
+            <p>© 2026 Vivian. Все права защищены.</p>{" "}
+            <span className="kurtukov">KURTUKOV</span>
           </p>
-          
         </div>
       </div>
     </footer>

@@ -4,8 +4,8 @@ export interface FilmProps {
   title: string;
   img: string[];
   undertitle: string;
-  kinopoisk: number;
-  imdb: number;
+  kinopoisk?: number;
+  imdb?: number;
   youtubesourse: string;
   fav: boolean;
   desc: string;
